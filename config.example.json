@@ -1,0 +1,6 @@
+{
+  "kvm_user": "admin",
+  "kvm_password_file": "/userdata/glkvm-login-agent/kvm-password",
+  "api_key_file": "/userdata/glkvm-login-agent/deepseek-key",
+  "decoder": "/userdata/glkvm-login-agent/ffmpeg"
+}

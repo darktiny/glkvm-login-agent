@@ -1,0 +1,24 @@
+# Device-local configuration and credentials
+config.json
+kvm-password
+deepseek-key
+mac-password
+.env
+.env.*
+*.key
+*.pem
+# Device state, screenshots, logs and staging
+attempt.json*
+*.jpg
+*.jpeg
+*.png
+*.log
+backups/
+.update/
+# Generated files and separately downloaded decoder
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+ffmpeg
+decoder-download/

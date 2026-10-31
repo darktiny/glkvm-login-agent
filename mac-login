@@ -1,0 +1,18 @@
+#!/bin/sh
+# One-shot entry point installed on the GLKVM PATH.
+case "${1-}" in
+    configure)
+        shift
+        exec python3 /userdata/glkvm-login-agent/configure.py "$@"
+        ;;
+    ""|--*)
+        exec python3 /userdata/glkvm-login-agent/agent.py "$@"
+        ;;
+    *)
+        if [ "$#" -ne 1 ]; then
+            echo 'Usage: mac-login [PASSWORD] | mac-login configure' >&2
+            exit 2
+        fi
+        exec python3 /userdata/glkvm-login-agent/agent.py --password="$1"
+        ;;
+esac
